@@ -59,6 +59,10 @@ population_size = 1000
 n_generations = 60
 genetic_op = 'mutation'
 ```
+Graph explanation:
+* Green edges connect nodes with a different color
+* Red edges connect nodes with the same color
+
 **1st generation fittest colouring**
 ![gener_1](https://user-images.githubusercontent.com/18519371/29922174-c8a03cfc-8e54-11e7-8795-d758d5a28c8e.png)
 
