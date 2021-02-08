@@ -90,7 +90,6 @@ def generate_random_graph(number_of_nodes, probability_of_edge):
     G = nx.fast_gnp_random_graph(number_of_nodes, probability_of_edge, seed=None, directed=False)
     edges = []
     for i in range(number_of_nodes):
-        temp1 = G.adj[i]
         edges.append(list(G.adj[i].keys()))
     return G.number_of_edges(), edges
 
@@ -165,7 +164,7 @@ def genetic_operator(pair_of_parents, method='SPC'):
         point = np.random.randint(0, n_nodes)
 
         parent_1_colors = pair_of_parents[0].colors
-        parent_2_colors = pair_of_parents[0].colors
+        parent_2_colors = pair_of_parents[1].colors
 
         child_one_colors = parent_1_colors[:point] + parent_2_colors[point:]
         child_two_colors = parent_2_colors[:point] + parent_1_colors[point:]
